@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ====================== ANIMATIONS ====================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====================== NAVBAR ====================== */
+.navbar {
+  background-color: rgb(45, 44, 44);
+  padding: 25px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-logo-name {
+  color: white;
+  font-size: 1.3em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.navbar-logo-name span {
+  color: orangered;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: orangered;
+}
+
+.contact-btn {
+  background-color: orangered;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 11px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.contact-btn:hover {
+  background-color: #d13a00;
+  transform: translateY(-2px);
+}
+
+/* ====================== HERO SECTION ====================== */
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 60px;
+  min-height: calc(100vh - 90px);
+}
+
+.content {
+  flex: 1;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hi {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.content h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.content h2 {
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.content span {
+  color: orangered;
+}
+
+.description {
+  max-width: 580px;
+  margin-bottom: 32px;
+  color: #333;
+  font-size: 1.05rem;
+}
+
+.icons {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.icon-item:hover {
+  transform: translateY(-4px);
+}
+
+.icon-item img {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.button1 {
+  background: white;
+  border: 2px solid orangered;
+  color: orangered;
+  padding: 12px 32px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button1:hover {
+  background-color: orangered;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.button2 {
+  background-color: orangered;
+  border: 2px solid orangered;
+  color: white;
+  padding: 12px 32px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button2:hover {
+  background-color: #d13a00;
+  border-color: #d13a00;
+  transform: translateY(-2px);
+}
+
+/* ====================== PROFILE IMAGE ====================== */
+.my-profile {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 0.9s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.my-profile img {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;           /* Modern circular profile look */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.my-profile img:hover {
+  transform: scale(1.03);
+}
+
+/* ====================== RESPONSIVE DESIGN ====================== */
+@media screen and (max-width: 1200px) {
+  .main-section {
+    gap: 50px;
+  }
+  
+  .content h1 { font-size: 2.8rem; }
+  .content h2 { font-size: 2.2rem; }
+}
+
+@media screen and (max-width: 992px) {
+  .main-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 50px 5%;
+    min-height: auto;
+    gap: 45px;
+  }
+
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .icons,
+  .buttons {
+    justify-content: center;
+  }
+
+  .my-profile {
+    margin-bottom: 10px;
+  }
+
+  .my-profile img {
+    max-width: 380px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 20px 5%;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .navbar-links {
+    gap: 18px;
+  }
+
+  .content h1 { font-size: 2.45rem; }
+  .content h2 { font-size: 1.95rem; }
+
+  .my-profile img {
+    max-width: 300px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .button1,
+  .button2 {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content h1 { font-size: 2.25rem; }
+  .content h2 { font-size: 1.8rem; }
+  .hi { font-size: 1.45rem; }
+}
